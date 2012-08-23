@@ -3,12 +3,12 @@ $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 require "cucumber/platform"
 
 Gem::Specification.new do |s|
-  s.name        = 'cucumber'
+  s.name        = 'casecumber'
   s.version     = Cucumber::VERSION
-  s.authors     = ["Aslak Hellesøy"]
+  s.authors     = ["Aslak Hellesøy", "Case Commons, LLC", "Trace Wax", "Jason Berlinsky"]
   s.description = 'Behaviour Driven Development with elegance and joy'
   s.summary     = "cucumber-#{s.version}"
-  s.email       = 'cukes@googlegroups.com'
+  s.email     = ["cukes@googlegroups.com", "casecommons-dev@googlegroups.com", "gems@tracedwax.com", "jason@jasonberlinsky.com"]
   s.homepage    = "http://cukes.info"
 
   s.platform    = Gem::Platform::RUBY
