@@ -210,7 +210,7 @@ module Cucumber
       end
 
       def feature_files #:nodoc:
-        if ENV['FEATURES'].present?
+        if ENV['FEATURES']
           make_command_line_safe(ENV['FEATURES'].split(','))
         else
           make_command_line_safe(FileList[ ENV['FEATURE'] || [] ])
