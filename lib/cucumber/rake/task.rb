@@ -121,7 +121,7 @@ module Cucumber
              quoted_binary(@cucumber_bin), '--', @cucumber_opts, @feature_files].flatten
           end
         end
-        
+
       end
 
       LIB = File.expand_path(File.dirname(__FILE__) + '/../..') #:nodoc:
@@ -210,7 +210,11 @@ module Cucumber
       end
 
       def feature_files #:nodoc:
-        make_command_line_safe(FileList[ ENV['FEATURE'] || [] ])
+        if ENV['FEATURES'].present?
+          make_command_line_safe(ENV['FEATURES'].split(','))
+        else
+          make_command_line_safe(FileList[ ENV['FEATURE'] || [] ])
+        end
       end
 
       def make_command_line_safe(list)
